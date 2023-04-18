@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Violet Courtyard</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="{{url_for('static', filename='style/index.css')}}" /> 
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <h2>Violet Courtyard</h2>
+      <h6>By FebryanS</h6>  
+    </div>
+    <nav class="navbar">
+      <button class="active">Home</a>
+      <button onclick="scrollBottom()">About</button>
+    </nav>
+  </header>
+
+  <section class="top">
+    <h2 id="text">Hello, World!</h2>
+    <button id="scroll" onclick="scrollPage()">Continue</button>
+    <img class="sun" id="sun" style="z-index:1" src="{{url_for('static', filename='images/sun.png')}}"/>
+    <div class="parallax">
+       <img id="hill5" style="z-index:1" src="{{url_for('static', filename='images/hill5.png')}}"/>
+      <img id="hill4" style="z-index:2" src="{{url_for('static', filename='images/hill4.png')}}"/>
+      <img id="hill3" style="z-index:4" src="{{url_for('static', filename='images/hill3.png')}}"/>
+      <img id="hill2" style="z-index:5" src="{{url_for('static', filename='images/hill2.png')}}"/>
+      <img id="hill1" style="z-index:6" src="{{url_for('static', filename='images/hill1.png')}}"/>
+    </div>
+  </section>
+        
+  <section class="mid">
+    <a class="violet" href="{{violet_repo}}">
+      <img src="{{logo}}" />
+      <div class="title">
+        <h3>
+          ヴァイオレット
+        </h3>
+        <h6>
+          Violet
+        </h6>
+      </div>
+    </a>
+    <div class="container">
+       <img class="moon" id="moon" src="{{url_for('static', filename='images/moon.png')}}" />
+    </div>
+    <img class="back" src="{{url_for('static', filename='images/back.jpg')}}" />
+    <img class="cave1" src="{{url_for('static', filename='images/cave1.png')}}" />
+    <img class="cave2" src="{{url_for('static', filename='images/cave2.png')}}" />
+  </section>
+        
+  <section class="bottom">
+    <h2>
+      About
+    </h2>
+    <a href="{{github}}">
+      <img src="{{url_for('static',filename='social/github.png')}}" />
+      FebryanShino
+    </a>
+    <div class="social">
+      <a href="{{twitter}}">
+        <img src="{{url_for('static',filename='social/twitter.png')}}" />
+      </a>
+      <a href="{{pixiv}}">
+        <img src="{{url_for('static',filename='social/pixiv.png')}}" />
+      </a>
+    </div>
+    <a class="repo" href="{{repo}}">
+      <h6>
+        Website Repository
+      </h6>
+    </a>
+    
+  </section>
+  <script src="{{url_for('static', filename='script/index.js')}}"></script>
+</body>
+</html>

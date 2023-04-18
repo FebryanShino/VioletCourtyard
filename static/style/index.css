@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: white;
+}
+
+header {
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  z-index: 1000;
+  padding: 2vh 5vw;
+  background: white;
+}
+
+.logo {
+  color: #342580;
+  weight: 600;
+  font-size: 1.5vh;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.logo h6 {
+  color: #895ADA;
+}
+
+.navbar {
+  padding: 0.5vh 2vw;
+}
+
+.navbar button {
+  color: #342580;
+  font-size: 1.3vh;
+  text-decoration: none;
+  border-radius: 20px;
+  weight: 600;
+  padding: 0.5vh 2vw;
+  background: none;
+  border: none;
+  margin-left: 0.5vh;
+
+}
+
+.navbar button:hover, .navbar .active {
+  background: #342580;
+  color: white;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.top h2 {
+  font-size: 5vh;
+  color: #342580;
+  weight: 600;
+  z-index: 3;
+  text-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.top button {
+  z-index: 1000;
+  font-size: 2vh;
+  text-decoration: none;
+  background: none;
+  border: 1px solid #895ADA;
+  padding: 0.5vh 2vw;
+  border-radius: 25px;
+  color: #895ADA;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.top .sun {
+  width: 20%;
+  position: absolute;
+  translate: 30vw -20vh;
+}
+
+.top .parallax img {
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+
+.mid {
+  position: relative; 
+  height: 90vh;
+  background: #131862;
+  padding: 3vh 5vw;
+  padding-top: 20vh;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.mid .cave1, .mid .cave2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.mid .back {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.mid .container {
+  display: flex;
+  justify-content: center;
+}
+
+.mid .moon {
+  width: 20%;
+  position: absolute;
+  transform: translate(30vw, -80vh);
+  z-index: 2;
+  
+}
+
+
+
+.violet {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  background: black;
+  border-radius: 7px;
+  padding: 1.5vh;
+  z-index: 999;
+  width: 90vw;
+  height: 11vh;
+  translate: 0 55vh;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+.violet img {
+  width: 8vh;
+  border-radius: 10px;
+}
+
+.violet .title {
+  color: gold;
+  font-size: 2vh;
+  align-self: center;
+  z-index: 999;
+}
+
+.violet .title h6 {
+  color: #895ADA;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  height: 30vh;
+  background: black;
+  padding-top: 10vh;
+}
+
+.bottom h2 {
+  color: white;
+  margin-bottom: 3vh;
+}
+
+.bottom a {
+  font-size: 1.9vh;
+  text-decoration: none;
+  color: white;
+  align-self: center;
+}
+
+.bottom a img {
+  height: 1.9vh;
+}
+
+.bottom .social {
+  margin-top: 1vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom .social a img {
+  height: 2.1vh;
+  margin: 0 5vw;
+}
+
+.bottom .repo {
+  margin-top: 2vh;
+  position: relative;
+  padding: 0.5vh;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom .repo h6 {
+  font-size: 1.5vh;
+  color: black;
+}
