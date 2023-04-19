@@ -3,6 +3,7 @@ from threading import Thread
 import os
 
 
+
 shiina = Flask(__name__)
 
 @shiina.route("/")
@@ -15,7 +16,8 @@ def home():
     github = os.getenv("github"),
     twitter = os.getenv("twitter"),
     pixiv = os.getenv("pixiv"),
-    repo = os.getenv("app_repo")
+    repo = os.getenv("app_repo"),
+    invite = os.getenv("invite")
   )
 
 

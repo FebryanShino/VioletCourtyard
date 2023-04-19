@@ -5,6 +5,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="{{url_for('static', filename='style/index.css')}}" /> 
+  <link rel="icon" href="{{logo}}" />
+  <link rel="manifest" href="{{url_for('static', filename='manifest.json')}}" />
+  
 </head>
 <body>
   <header id="header">
@@ -13,13 +16,13 @@
       <h6>By FebryanS</h6>  
     </div>
     <nav class="navbar">
-      <button class="active">Home</a>
-      <button onclick="scrollBottom()">About</button>
+      <button id="home" onclick="scrollToTop()">Home</button>
+      <button id="about" onclick="scrollBottom()">About</button>
     </nav>
   </header>
-
+  
   <section class="top">
-    <h2 id="text">Hello, World!</h2>
+    <h2 id="text"></h2>
     <button id="scroll" onclick="scrollPage()">Continue</button>
     <img class="sun" id="sun" style="z-index:1" src="{{url_for('static', filename='images/sun.png')}}"/>
     <div class="parallax">
@@ -32,6 +35,23 @@
   </section>
         
   <section class="mid">
+    <div class="info">
+      <div class="greet">
+        <h2 id="welcome" class="welcome"></h2>
+      </div>
+      <div class="desc">
+         <p>
+           <span id="bot-name">ヴァイオレット</span> is a multifunctional bot created by <span id="author">FebryanShino</span><br/>
+           Violet can do everything you want, at least that's what my creator aims<br/><br/>
+           Sincerely,<br/>
+           <span id="bot-name2">ヴァイオレット</span>
+         </p>
+      </div>
+      <a class="server" href="{{invite}}">
+        <h6>Violet Courtyard Server</h6>
+      </a>
+    </div>
+    
     <a class="violet" href="{{violet_repo}}">
       <img src="{{logo}}" />
       <div class="title">
@@ -52,9 +72,7 @@
   </section>
         
   <section class="bottom">
-    <h2>
-      About Me
-    </h2>
+    <h2>About Me</h2>
     <a href="{{github}}">
       <img src="{{url_for('static',filename='social/github.png')}}" />
       FebryanShino
@@ -68,9 +86,7 @@
       </a>
     </div>
     <a class="repo" href="{{repo}}">
-      <h6>
-        Website Repository
-      </h6>
+      <h6>Website Repository</h6>
     </a>
     
   </section>

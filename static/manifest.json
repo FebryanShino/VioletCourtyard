@@ -1,0 +1,16 @@
+{
+  "name": "Violet Courtyard",
+  "short_name": "Violet Courtyard",
+  "description": "It's me, Violet!",
+  "start_url": "https://violet-courtyard.febryanshino.repl.co",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://pbs.twimg.com/media/FpUeR6FakAQslJC?format=jpg&name=medium",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }
+  ],
+  "background_color": "#342580",
+  "theme_color": "#ffffff"
+}
