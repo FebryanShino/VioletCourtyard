@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
   min-height: 100vh;
   background: white;
 }
+
 
 header {
   position: fixed;
@@ -265,6 +266,75 @@ header {
   color: #895ADA;
   text-align: center;
 }
+
+
+.search {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  height: 70vh;
+  position: relative;
+  padding: 3vh 5vw;
+  align-items: space-between;
+}
+
+.search h2 {
+  color: white;
+  margin-top: 4vh;
+  margin-bottom: 6vh;
+}
+
+.search .get-post {
+  display: flex;
+  flex-direction: column;
+  background: #342580;
+  padding: 1.5vh 5vw;
+  transform: translate(-5vw, 0);
+  border-radius: 0 10px 10px 0;
+  width: 80%;
+}
+
+.search .get-post input {
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  height: 3vh;
+  padding: 0 1vw;
+  outline: none;
+}
+
+.search .get-post:hover {
+  box-shadow: 0 0 8px rgba(256,256,256, 1);
+}
+
+.search .get-post button {
+  width: 50%;
+  margin-top: 2vh;
+  text-decoration: none;
+  background: gold;
+  color: #342580;
+  border: none;
+  border-radius: 10px;
+  padding: 1vw;
+  font-weight: 1000;
+}
+
+.search .container {
+  background: #342580;
+  padding: 2.5vh 5vw;
+  left: 0;
+  transform: translate(-3vh, 0);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 3vh;
+}
+
+.search .container img {
+  max-width: 80vw;
+  max-height: 30vh;
+  border-radius: 10px;
+}
+
 
 .bottom {
   display: flex;

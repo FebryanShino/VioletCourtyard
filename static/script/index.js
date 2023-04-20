@@ -25,7 +25,7 @@ let about = document.getElementById('about');
 
 function scrollPage() {
   window.scroll({
-    top: docHeight/2.3,
+    top: docHeight/3,
     behavior: 'smooth'
   });
 }
@@ -54,6 +54,7 @@ function scrollBottom() {
   });
 }
 
+
 function helloWorld(title, element, speed, callback = null) {
   let i = 0;
   let typingIntervalId = setInterval(type, speed);
@@ -72,6 +73,42 @@ function helloWorld(title, element, speed, callback = null) {
     i++;
   }
 }
+
+
+
+/* jQuery*/
+
+$(() => {
+  
+  $(".get-post").submit((event) => {
+    let btn = $(".generate");
+    let tags = $(".get-post").serialize();
+
+    
+    btn.prop("disabled", true);
+    btn.css("background", "lime");
+
+    event.preventDefault();
+    
+    $.ajax({
+      type: "POST",
+      url: "/api/",
+      data: tags,
+      success: (post) => {
+        $(".post").attr("src", post.url);
+      },
+      complete: () => {
+        btn.prop("disabled", false);
+        btn.css("background", "gold");
+        $(".get-post").css("box-shadow","none");
+      },
+      error: () => {
+        alert("Bruh");
+      }
+    });
+  });
+});
+
 
 
 /*Event Listeners */
@@ -102,9 +139,9 @@ window.addEventListener("scroll", () => {
     welcome.style.color = "white";
   }
 
-  author.style.filter = `hue-rotate(${value-docHeight/2.3}deg)`;
-  botName.style.filter = `hue-rotate(${value-docHeight/2.3}deg)`;
-  botName2.style.filter = `hue-rotate(${value-docHeight/2.3}deg)`;
+  author.style.filter = `hue-rotate(${value-docHeight/3}deg)`;
+  botName.style.filter = `hue-rotate(${value-docHeight/3}deg)`;
+  botName2.style.filter = `hue-rotate(${value-docHeight/3}deg)`;
 
   
   sun.style.marginTop = value*2.5 + 'px';
@@ -129,9 +166,7 @@ window.addEventListener("scroll", () => {
     about.style.color = "#342580";
     home.style.background = "#342580";
     home.style.color = "white";
-  }
-
-  
+  }  
 });
 
 

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{url_for('static', filename='style/index.css')}}" /> 
   <link rel="icon" href="{{logo}}" />
   <link rel="manifest" href="{{url_for('static', filename='manifest.json')}}" />
-  
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 </head>
 <body>
   <header id="header">
@@ -69,6 +69,17 @@
     <img class="back" src="{{url_for('static', filename='images/back.jpg')}}" />
     <img class="cave1" src="{{url_for('static', filename='images/cave1.png')}}" />
     <img class="cave2" src="{{url_for('static', filename='images/cave2.png')}}" />
+  </section>
+
+  <section class="search">
+    <h2>Search Image</h2>
+    <form class="get-post" method="POST">
+      <input name="tags" value ="" />
+      <button class="generate">Generate</button>
+    </form>
+    <div class="container">
+      <img class="post" src="https://pbs.twimg.com/media/FrGOHOnXwAEfBQ1?format=jpg&name=large"/>
+    </div>
   </section>
         
   <section class="bottom">

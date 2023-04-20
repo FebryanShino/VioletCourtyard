@@ -1,13 +1,14 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify, request
 from threading import Thread
 import os
 
+from anime import Danbooru
 
 
 shiina = Flask(__name__)
 
 @shiina.route("/")
-def home():
+def index():
   return render_template(
     "index.html",
     logo = os.getenv("violet_logo"),
@@ -20,6 +21,15 @@ def home():
     invite = os.getenv("invite")
   )
 
+
+@shiina.route("/api/", methods=["POST"])
+def danbooru_api():
+  tags = request.form['tags']
+  url = Danbooru(tags).get_post()
+  
+  return jsonify({'url': url})
+  
+  
 
 
 def run():
